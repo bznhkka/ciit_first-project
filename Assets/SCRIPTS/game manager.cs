@@ -9,7 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     public string storyText;
     public int hp_value;
     public int sta_val;
-    public GameObject lvl1choice;
+    public GameObject lvl1choice, hpobject, staobject, title, startobject, exitobject, mainmenu, storytext;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +43,20 @@ public class NewBehaviourScript : MonoBehaviour
         storyText = "may anim n bohai k p nman";
         hp_value = 0;
         lvl1choice.SetActive(false);
+    }
+
+    public void StartGame () 
+    {
+        hpobject.SetActive(true);
+        staobject.SetActive(true);
+        lvl1choice.SetActive(true);
+        mainmenu.SetActive(false) ;
+        storytext.SetActive(true);
+        title.SetActive(false);
+       
+    }
+    public void ExitGame ()
+    {
+        Application.Quit();
     }
 }
