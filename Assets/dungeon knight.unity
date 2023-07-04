@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -301,9 +305,10 @@ GameObject:
   - component: {fileID: 91716721}
   - component: {fileID: 91716723}
   - component: {fileID: 91716722}
+  - component: {fileID: 91716724}
   m_Layer: 0
   m_Name: add_health
-  m_TagString: Untagged
+  m_TagString: health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,12 +340,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2dcae1b0a40bd4cb352d70992ab165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 0
+  speed: 0
+  health: 1
   speedBoost: 0
-  healthBoost: 2
-  duration: 5
-  player: {fileID: 0}
+  healthBoost: 5
+  duration: 0
+  player: {fileID: 902756958}
 --- !u!212 &91716723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -393,6 +398,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &91716724
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91716720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.14999999, y: 0.14999999}
+  m_Direction: 0
 --- !u!1001 &165368399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -604,6 +648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -619,6 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300199048}
   - component: {fileID: 300199047}
+  - component: {fileID: 300199049}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -656,6 +705,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &300199049
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300199046}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &317603825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -728,9 +826,10 @@ GameObject:
   - component: {fileID: 369952187}
   - component: {fileID: 369952189}
   - component: {fileID: 369952188}
+  - component: {fileID: 369952190}
   m_Layer: 0
   m_Name: add_speed
-  m_TagString: Untagged
+  m_TagString: speed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,7 +842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369952186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4666011, y: -2.7636056, z: -0.20051013}
+  m_LocalPosition: {x: -1.4666011, y: 0.49, z: -0.20051013}
   m_LocalScale: {x: 4.7514, y: 4.7514, z: 4.7514}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -764,10 +863,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 0
-  speedBoost: 3
-  healthBoost: 5
-  duration: 0
-  player: {fileID: 0}
+  speedBoost: 8
+  healthBoost: 0
+  duration: 5
+  player: {fileID: 902756958}
 --- !u!212 &369952189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -820,6 +919,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &369952190
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369952186}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000007450581, y: 0}
+  m_Size: {x: 0.13999999, y: 0.13999999}
+  m_Direction: 0
 --- !u!1001 &370256839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -875,6 +1009,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -936,6 +1074,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1043,7 +1185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504590873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.675, y: 2.669, z: 0}
+  m_LocalPosition: {x: 8.665, y: 2.659, z: 0}
   m_LocalScale: {x: 4.6493, y: 4.6493, z: 4.6493}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1110,7 +1252,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   player: {fileID: 902756958}
   trapDamage: 3
-  isPlayerOnTop: 0
+  isPlayerOnTop: 1
 --- !u!1 &616720168
 GameObject:
   m_ObjectHideFlags: 0
@@ -8865,6 +9007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8887,6 +9033,7 @@ GameObject:
   - component: {fileID: 749528105}
   - component: {fileID: 749528104}
   - component: {fileID: 749528107}
+  - component: {fileID: 749528108}
   m_Layer: 0
   m_Name: Spike Trap_16
   m_TagString: Untagged
@@ -8997,7 +9144,52 @@ MonoBehaviour:
   anim: {fileID: 0}
   player: {fileID: 902756958}
   trapDamage: 3
-  isPlayerOnTop: 0
+  isPlayerOnTop: 1
+--- !u!61 &749528108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749528103}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.28, y: 0.31}
+    newSize: {x: 0.28, y: 0.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.28, y: 0.31}
+  m_EdgeRadius: 0
 --- !u!4 &833851076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3382853073444827491, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
@@ -9333,6 +9525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9408,6 +9604,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11685,6 +11885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinAniamtion_0 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11793,9 +11997,10 @@ GameObject:
   - component: {fileID: 1660262849}
   - component: {fileID: 1660262851}
   - component: {fileID: 1660262850}
+  - component: {fileID: 1660262852}
   m_Layer: 0
   m_Name: add_health (1)
-  m_TagString: Untagged
+  m_TagString: health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11827,12 +12032,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2dcae1b0a40bd4cb352d70992ab165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 0
+  speed: 0
+  health: 1
   speedBoost: 0
-  healthBoost: 2
-  duration: 5
-  player: {fileID: 0}
+  healthBoost: 5
+  duration: 0
+  player: {fileID: 902756958}
 --- !u!212 &1660262851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11885,6 +12090,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1660262852
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660262848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000000055879354, y: 0}
+  m_Size: {x: 0.14999999, y: 0.14999999}
+  m_Direction: 0
 --- !u!4 &1698660736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3382853073444827491, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
@@ -11945,6 +12185,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12054,6 +12298,10 @@ PrefabInstance:
     - target: {fileID: 3508242202924171479, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
       propertyPath: m_Name
       value: CoinAniamtion_0 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687550652992784027, guid: 656491ac7ef089542bc61a5b41becf91, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
