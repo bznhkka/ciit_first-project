@@ -39,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: lava
+    uniqueID: 696535077
+    locked: 0
+  - name: ground
+    uniqueID: 3500068599
+    locked: 0
+  - name: walls
+    uniqueID: 662977659
+    locked: 0
+  - name: player
+    uniqueID: 741600705
+    locked: 0
+  - name: trap
+    uniqueID: 2636768397
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -6,16 +6,15 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     //Speed
-    public float moveSpeed;
+    public int moveSpeed;
 
     //RigidBody
     public Rigidbody2D rigidBody;
     private Vector2 movementInput;
     public Animator anim;
-
     //to play animation
     public int coinsCount;
-
+    public int healthPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +74,7 @@ public class Player_Movement : MonoBehaviour
 
 
     }
+
     // best for physics calculations
     private void FixedUpdate()
     {
@@ -94,6 +94,17 @@ public class Player_Movement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             coinsCount++;
+        }
+
+        if (collision.gameObject.CompareTag("health"))
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("speed"))
+        {
+            Transform col = collision.transform;
+            col.transform.position = new Vector2(999, 999);
         }
     }
 
